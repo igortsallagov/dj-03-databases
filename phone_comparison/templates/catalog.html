@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Каталог{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="header">
+            <h1>Сравнение телефонов</h1>
+        </div>
+    <table cellspacing="15" cellpadding="15">
+        <tr>
+            <td>Модель: </td>
+            {% for phone in phones %}
+            <td><b>{{phone.1}}</b></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Диагональ экрана: </td>
+            {% for phone in phones %}
+            <td>{{phone.2}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Разрешение экрана: </td>
+            {% for phone in phones %}
+            <td>{{phone.3}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Камера (Мп): </td>
+            {% for phone in phones %}
+            <td>{{phone.4}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Память (Гб): </td>
+            {% for phone in phones %}
+            <td>{{phone.5}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Операционная система: </td>
+            {% for phone in phones %}
+            <td>{{phone.6}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Lightning: </td>
+            {% for phone in phones %}
+            <td>{{phone.8}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Карта памяти (Гб): </td>
+            {% for phone in phones %}
+            <td>{{phone.10}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Цена (руб): </td>
+            {% for phone in phones %}
+            <td>{{phone.7}}</td>
+            {% endfor %}
+        </tr>
+    </table>
+    </div>
+{% endblock %}
